@@ -2,6 +2,8 @@
 
 > Create nested values and any intermediaries using list notation `['a','b',c']` OR dot notation `"a.b.c"`.
 
+## Still in development, will be ready very soon (1 week max)
+
 This is a `Dart` copy of the `js` projects [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert) and [object-path](https://www.npmjs.com/package/object-path) by [Mario Casciaro](https://github.com/mariocasciaro).
 Please consider following either (or all) projects and giving some stars :star: to show your :heart: and support.
 Also, feel free to make pull requests, open issues, or just let me know if I've messed up. The goal is to keep this project functionality in-line with the originals as far as possible. Bear in mind that some functionality is slightly different to accommodate for the typed nature of `Dart`, as well as my personal preference (if you want anything changed...my arm can be twisted).
