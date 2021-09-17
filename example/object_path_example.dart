@@ -3,7 +3,7 @@ import 'package:pretty_json/pretty_json.dart';
 
 void main() {
   //List Example
-  var mock = <String, dynamic>{
+  Map<String, dynamic>? mock = <String, dynamic>{
     'Key 1': 'Val 1',
     'Key 2': 'Val 2',
     'Key 3': {'Key 3.1': 'Val 3'}

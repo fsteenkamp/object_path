@@ -5,7 +5,7 @@ void main() {
   group('Test List Notation', () {
     test('Test set function', () {
       var objPath = ObjectPath();
-      var testMap = <String, dynamic>{
+      Map<String, dynamic>? testMap = <String, dynamic>{
         'Key 1': 'Val 1',
         'Key 2': 'Val 2',
         'Key 3': {'Key 3.1': 'Val 3'}
@@ -32,7 +32,7 @@ void main() {
 
     test('Test unset function', () {
       var objPath = ObjectPath();
-      var testMap = <String, dynamic>{
+      Map<String, dynamic>? testMap = <String, dynamic>{
         'Key 1': 'Val 1',
         'Key 2': 'Val 2',
         'Key 3': {'Key 3.1': 'Val 3'},
@@ -70,7 +70,7 @@ void main() {
   group('Test Dot Notation', () {
     test('Test setDot function', () {
       var objPath = ObjectPath();
-      var testMap = <String, dynamic>{
+      Map<String, dynamic>? testMap = <String, dynamic>{
         'Key 1': 'Val 1',
         'Key 2': 'Val 2',
         'Key 3': {'Key 3.1': 'Val 3'}
@@ -97,7 +97,7 @@ void main() {
 
     test('Test unsetDot function', () {
       var objPath = ObjectPath();
-      var testMap = <String, dynamic>{
+      Map<String, dynamic>? testMap = <String, dynamic>{
         'Key 1': 'Val 1',
         'Key 2': 'Val 2',
         'Key 3': {'Key 3.1': 'Val 3'},
