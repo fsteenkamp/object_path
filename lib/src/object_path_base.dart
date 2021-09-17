@@ -12,8 +12,8 @@ class ObjectPath {
   /// @List<String> path
   /// @dynamic value
   ///
-  Map<String, dynamic> setList(
-    Map<String, dynamic> target,
+  Map<String, dynamic>? setList(
+    Map<String, dynamic>? target,
     List<String> path,
     dynamic value,
   ) {
@@ -22,7 +22,7 @@ class ObjectPath {
     }
 
     if (path.length == 1) {
-      _result(target, path[0], value);
+      _result(target!, path[0], value);
       return target;
     }
 
@@ -32,7 +32,7 @@ class ObjectPath {
     for (var i = 0; i < len; i++) {
       var prop = path[i];
 
-      if (!(target[prop] is Map<String, dynamic>)) {
+      if (!(target![prop] is Map<String, dynamic>)) {
         target[prop] = <String, dynamic>{};
       }
 
@@ -55,8 +55,8 @@ class ObjectPath {
   /// @Map<String,dynamic> target
   /// @String path (Map key)
   ///
-  Map<String, dynamic> unsetList(
-    Map<String, dynamic> target,
+  Map<String, dynamic>? unsetList(
+    Map<String, dynamic>? target,
     List<String> path,
   ) {
     if (!(path is List<String>)) {
@@ -64,7 +64,7 @@ class ObjectPath {
     }
 
     if (path.length == 1) {
-      target.remove(path[0]);
+      target!.remove(path[0]);
       return target;
     }
 
@@ -74,7 +74,7 @@ class ObjectPath {
     for (var i = 0; i < len; i++) {
       var prop = path[i];
 
-      if (!(target.containsKey(prop))) {
+      if (!(target!.containsKey(prop))) {
         break;
       }
 
@@ -99,7 +99,7 @@ class ObjectPath {
   ///
   ///
   dynamic getList(
-    Map<String, dynamic> target,
+    Map<String, dynamic>? target,
     List<String> path,
     {
       dynamic defaultVal,
@@ -110,7 +110,7 @@ class ObjectPath {
     }
 
     if (path.length == 1) {
-      return target[path[0]];
+      return target![path[0]];
     }
 
     var len = path.length;
@@ -118,7 +118,7 @@ class ObjectPath {
     for (var i = 0; i < len; i++) {
       var prop = path[i];
 
-      if (!(target.containsKey(prop))) {
+      if (!(target!.containsKey(prop))) {
         break;
       }
 
@@ -139,8 +139,8 @@ class ObjectPath {
   /// @String path (Map key)
   /// @dynamic value
   ///
-  Map<String, dynamic> setDot(
-    Map<String, dynamic> target,
+  Map<String, dynamic>? setDot(
+    Map<String, dynamic>? target,
     String path,
     dynamic value, {
     String splitAt = '.',
@@ -158,8 +158,8 @@ class ObjectPath {
   /// @optional String splitAt
   /// @optional String escapeWith
   ///
-  Map<String, dynamic> unsetDot(
-    Map<String, dynamic> target,
+  Map<String, dynamic>? unsetDot(
+    Map<String, dynamic>? target,
     String path, {
     String splitAt = '.',
     String escapeWith = '\\',
@@ -178,7 +178,7 @@ class ObjectPath {
   /// @optional String escapeWith
   ///
   dynamic getDot(
-      Map<String, dynamic> target,
+      Map<String, dynamic>? target,
       String path, {
         String splitAt = '.',
         String escapeWith = '\\',
